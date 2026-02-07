@@ -2,8 +2,13 @@ module logisync
 
 go 1.25.5
 
-require github.com/gorilla/mux v1.8.1 // indirect
+require logisync/http v1.0.0
 
-replace example/hello => ./example
+require (
+	filippo.io/edwards25519 v1.1.0 // indirect
+	github.com/go-sql-driver/mysql v1.9.3 // indirect
+	github.com/gorilla/mux v1.8.1 // indirect
+    
+)
 
-require example/hello v0.0.0
+replace logisync/http => ./http
